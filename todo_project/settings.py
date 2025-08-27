@@ -98,13 +98,18 @@ SIMPLE_JWT = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'todo',      # replace with your DB name
-        'USER': 'admin',      # replace with your DB user
-        'PASSWORD': 'admin@123', # replace with your DB password
-        'HOST': 'localhost',         # or IP if remote DB
-        'PORT': '5432',              # default PostgreSQL port
+        'NAME': 'todo',     
+        'USER': 'admin',     
+        'PASSWORD': 'admin@123', 
+        'HOST': 'localhost',         
+        'PORT': '5432',           
     }
 }
+
+REST_FRAMEWORK = {
+    "EXCEPTION_HANDLER": "utils.exceptions.custom_exception_handler",
+}
+
 
 
 
